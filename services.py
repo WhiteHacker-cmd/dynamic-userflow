@@ -3,6 +3,8 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
+from dotenv import load_dotenv
+load_dotenv()
 import smtplib
 import jinja2
 
@@ -16,7 +18,7 @@ html_message = template.render()
 
 EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
-to_addresses = ["amalkrishnan47007@gmail.com", "thedeadlymortal@gmail.com"]
+to_addresses = ["shraddha@aviato.consulting", "pooja@aviato.consulting", "prijesh@aviato.consulting"]
 
 
 async def send_email():
