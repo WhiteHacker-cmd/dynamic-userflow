@@ -21,7 +21,3 @@ app.include_router(router.user_router)
 
 
 
-
-@app.get("/")
-async def home():
-    return {"message": "hello world"}
